@@ -1,0 +1,42 @@
+using System;
+
+namespace overloading
+{
+    class Printdata
+    {
+        public void Print(int i)
+        {
+            Console.WriteLine("printing it: {0}", i);
+        }
+
+        public void Print(double f)
+        {
+            Console.WriteLine("printing float: {0}", f);
+        }
+
+        public void Print(string s)
+        {
+            Console.WriteLine("printing string: {0}", s);
+        }
+    
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Printdata P = new Printdata();
+
+            //call print to print integer
+            P.Print(5);
+
+            //call print to print float
+            P.Print(500.263);
+
+            //call print to print string 
+            P.Print ("hello C#");
+            Console.ReadKey();
+        }
+    }
+}
